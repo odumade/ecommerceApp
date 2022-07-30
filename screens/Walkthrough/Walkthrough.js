@@ -7,6 +7,7 @@ import {
 
 import { TextButton } from "../../components";
 import { COLORS, SIZES, constants, FONTS } from "../../constants";
+import Walkthrough1 from './Walkthrough1';
 
 const Walkthrough = () => {
 
@@ -65,6 +66,39 @@ const Walkthrough = () => {
                 }}
             >
                 <Dots />
+
+                {/* Buttons */}
+                <View
+                    style={{
+                        flexDirection: 'row',
+                        height: 55
+                    }}
+                >
+                    <TextButton
+                        label="Join Now"
+                        contentContainerStyle={{
+                            flex: 1,
+                            borderRadius: SIZES.radius,
+                            backgroundColor: COLORS.lightGrey
+                        }}
+                        labelStyle={{
+                            color: COLORS.primary,
+                            ...FONTS.h3
+                        }}
+                    />
+                    <TextButton
+                        label="Log In"
+                        contentContainerStyle={{
+                            flex: 1,
+                            marginLeft: SIZES.radius,
+                            borderRadius: SIZES.radius,
+                            backgroundColor: COLORS.primary
+                        }}
+                        labelStyle={{
+                            ...FONTS.h3
+                        }}
+                    />
+                </View>
             </View>
         )
     }
@@ -98,15 +132,16 @@ const Walkthrough = () => {
                                 justifyContent: 'center'
                             }}
                         >
-                            {/* Walkthrough */}
-
+                            {/* Walkthrough Images */}
                             <View
                                 style={{
                                     flex: 1,
+                                    justifyContent: 'center'
                                 }}
                             >
-
+                                {index == 0 && <Walkthrough1 />}
                             </View>
+
 
                             {/* Title and Description */}
                             <View
