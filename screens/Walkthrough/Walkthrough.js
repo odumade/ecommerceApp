@@ -41,9 +41,43 @@ const Walkthrough = () => {
                                 justifyContent: 'center'
                             }}
                         >
-                            <Text>
-                                {item.title}
-                            </Text>
+                            {/* Walkthrough */}
+
+                            <View
+                                style={{
+                                    flex: 1,
+                                }}
+                            >
+
+                            </View>
+
+                            {/* Title and Description */}
+                            <View
+                                style={{
+                                    height: SIZES.height * 0.35,
+                                    alignItems: 'center',
+                                    justifyContent: 'flex-start',
+                                    paddingHorizontal: SIZES.padding
+                                }}
+                            >
+                                <Text
+                                    style={{
+                                        ...FONTS.h1
+                                    }}
+                                >
+                                    {item.title}
+                                </Text>
+                                <Text
+                                    style={{
+                                        marginTop: SIZES.radius,
+                                        textAlign: 'center',
+                                        ...FONTS.body3,
+                                        color: COLORS.grey
+                                    }}
+                                >
+                                    {item.sub_title}
+                                </Text>
+                            </View>
                         </View>
                     )
                 }}
